@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3f5ee">
+  <title>電機探索島｜國立臺灣海洋大學電機工程學系</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="電機探索島首頁"><span class="brand-mark">EE</span><span><strong>電機探索島</strong><small>國立臺灣海洋大學・電機工程學系</small></span></a>
+    <nav class="topnav" aria-label="主要導覽"><button class="nav-btn active" data-view="island">探索島嶼</button><button class="nav-btn" data-view="overview">課程總覽</button></nav>
+    <div class="top-actions"><span class="term-pill">111 學年度入學生適用</span><button class="icon-btn" id="sound-toggle" aria-label="播放系主任介紹" title="播放系主任介紹">♫</button></div>
+  </header>
+  <main id="top">
+    <section class="hero-head"><div><p class="eyebrow">A FOUR-YEAR JOURNEY</p><h1>從好奇出發，<em>沿著電流探索。</em></h1><p class="hero-copy">歡迎來到海大電機。從基礎科學到專業領域，找到屬於你的學習航線。</p></div><div class="head-stat"><span class="stat-number">4</span><span>年學習旅程</span><i>✳</i></div></section>
+    <section class="workspace">
+      <div class="map-column" id="island-view">
+        <div class="map-toolbar"><div><span class="live-dot"></span><span>自由探索</span><span class="toolbar-muted">點選島上建築，展開課程資訊</span></div><div><button id="tour-start" class="text-button tour-start">跟系主任走一圈　✦</button><button id="reset-map" class="text-button">重設地圖 ↗</button></div></div>
+        <div class="island-frame" id="island-frame">
+          <svg class="island-art" viewBox="0 0 1000 670" role="img" aria-label="由淺綠山丘、校園建築和海灣構成的電機探索島">
+            <defs><linearGradient id="sea" x2="0" y2="1"><stop stop-color="#e8f3ee"/><stop offset="1" stop-color="#d4eae6"/></linearGradient><linearGradient id="land" x2="0" y2="1"><stop stop-color="#e2e9ca"/><stop offset="1" stop-color="#cbdab0"/></linearGradient><pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="3" cy="4" r="1" fill="#fff" opacity=".55"/></pattern></defs>
+            <rect width="1000" height="670" fill="url(#sea)"/><rect width="1000" height="670" fill="url(#dots)"/>
+            <path d="M-40 435 C80 365 125 416 199 362 C266 312 255 255 359 237 C449 220 477 158 591 186 C687 208 708 262 817 252 C908 243 1032 293 1041 383 L1030 721 -20 721Z" fill="#b7d8d0" opacity=".7"/>
+            <path d="M10 414 C88 357 159 389 224 330 C295 265 282 228 369 213 C453 198 482 145 581 169 C670 190 721 242 818 233 C913 223 1005 275 1012 354 C991 401 943 420 918 476 C873 574 768 598 654 585 C559 574 498 624 397 597 C302 571 250 597 165 550 C94 512 30 495 10 414Z" fill="url(#land)" stroke="#aec69a" stroke-width="3"/>
+            <path d="M10 414 C88 357 159 389 224 330 C295 265 282 228 369 213 C453 198 482 145 581 169 C670 190 721 242 818 233 C913 223 1005 275 1012 354 C991 401 943 420 918 476 C873 574 768 598 654 585 C559 574 498 624 397 597 C302 571 250 597 165 550 C94 512 30 495 10 414Z" fill="url(#dots)" opacity=".5"/>
+            <path d="M45 419 C109 385 158 409 220 354 S311 277 376 266 S487 211 570 229 S713 282 802 270 S937 300 970 351 M215 355 Q285 414 340 484 T493 544 M573 229 Q578 323 664 371 T824 476" fill="none" stroke="#f7f2d9" stroke-width="14" stroke-linecap="round"/><path d="M45 419 C109 385 158 409 220 354 S311 277 376 266 S487 211 570 229 S713 282 802 270 S937 300 970 351 M215 355 Q285 414 340 484 T493 544 M573 229 Q578 323 664 371 T824 476" fill="none" stroke="#d4cba3" stroke-width="2" stroke-dasharray="5 10"/>
+            <g fill="#98b794" opacity=".7"><circle cx="94" cy="354" r="19"/><circle cx="122" cy="346" r="14"/><circle cx="186" cy="302" r="18"/><circle cx="211" cy="297" r="13"/><circle cx="739" cy="209" r="18"/><circle cx="764" cy="204" r="14"/><circle cx="894" cy="273" r="18"/><circle cx="918" cy="277" r="12"/><circle cx="727" cy="526" r="18"/><circle cx="754" cy="531" r="13"/><circle cx="289" cy="535" r="16"/><circle cx="315" cy="537" r="12"/></g>
+            <g class="campus-building" transform="translate(459 320)"><ellipse cx="52" cy="92" rx="83" ry="20" fill="#a1b894"/><path d="M0 39 51 9 108 39v54H0Z" fill="#fff7e7" stroke="#d6c9a5"/><path d="M-10 39 52 2 119 39 52 58Z" fill="#d89068"/><path d="M14 49h17v44H14zm34 0h17v44H48zm34 0h17v44H82z" fill="#84adb0"/><text x="53" y="111" text-anchor="middle" fill="#426662" font-size="12" font-family="sans-serif">電機系館</text></g>
+            <g transform="translate(806 440)" opacity=".78"><path d="M0 33h112l-12 16H14Z" fill="#fdf8e9"/><path d="M8 30 56 2l45 28Z" fill="#d88b66"/><rect x="15" y="33" width="9" height="16" fill="#91b7b4"/><rect x="38" y="33" width="9" height="16" fill="#91b7b4"/><rect x="61" y="33" width="9" height="16" fill="#91b7b4"/><rect x="84" y="33" width="9" height="16" fill="#91b7b4"/></g>
+            <text x="75" y="620" fill="#478c8b" opacity=".65" font-size="13" font-family="sans-serif" letter-spacing="5">PACIFIC OCEAN　～　NTOU</text>
+          </svg>
+          <div class="map-label label-north">基礎山徑 <small>FOUNDATION TRAIL</small></div><div class="map-label label-south">實作港灣 <small>PROJECT HARBOR</small></div>
+          <button class="course-node year-node y1" data-year="1"><span class="node-icon">∑</span><span>大一・基礎工坊</span><small>建立工程基礎</small></button>
+          <button class="course-node year-node y2" data-year="2"><span class="node-icon">⌁</span><span>大二・電路研究所</span><small>看見訊號與系統</small></button>
+          <button class="course-node year-node y3" data-year="3"><span class="node-icon">⌬</span><span>大三・專業實驗室</span><small>選擇深入方向</small></button>
+          <button class="course-node year-node y4" data-year="4"><span class="node-icon">✦</span><span>大四・專題港</span><small>研究與整合實踐</small></button>
+          <button class="chair-character" id="chair-guide" aria-label="與系主任對話"><span class="chair-bubble">跟著年級走，或自由點選建築開始探索吧！</span><span class="chair-avatar"><i class="hair"></i><i class="face">☺</i><i class="coat"></i></span><span class="chair-name">系主任</span></button>
+          <div class="student s1"><b>●</b><span>大一</span></div><div class="student s2"><b>●</b><span>大二</span></div><div class="student s3"><b>●</b><span>大三</span></div><div class="student s4"><b>●</b><span>大四</span></div>
+          <div class="map-compass">N <b>↗</b></div>
+        </div>
+        <div class="map-legend"><span><i class="legend-dot dot-required"></i>系訂專業必修</span><span><i class="legend-dot dot-core"></i>核心課程</span><span><i class="legend-dot dot-common"></i>共同教育</span><span class="legend-hint">✦ 點年級查看該階段課程</span></div>
+        <div class="specialties"><div class="section-heading"><div><span class="eyebrow">FIND YOUR CURRENT</span><h2>六條專業航線</h2></div><span>從核心課程看見不同領域</span></div><div class="specialty-grid" id="specialty-grid"></div><div class="specialty-detail hidden" id="specialty-detail"></div></div>
+        <div class="island-extras">
+          <section class="story-section"><div class="section-heading"><div><span class="eyebrow">A DAY IN EE</span><h2>學生的一天</h2></div><span>點選角色，聽聽不同年級的心聲</span></div><div class="student-stories" id="student-stories"></div><p class="example-note">情境對話為探索示例，非學生訪談或系上正式說明。</p></section>
+          <section class="mission-section"><div class="section-heading"><div><span class="eyebrow">ISLAND QUEST</span><h2>探索任務</h2></div><span id="mission-progress">0 / 3 完成</span></div><div class="mission-list" id="mission-list"></div></section>
+        </div>
+      </div>
+      <aside class="detail-panel" id="detail-panel">
+        <div class="advisor-card"><div class="advisor-top"><span class="advisor-tag"><i></i> 系主任導覽</span><button class="sound-button" id="speak-btn" aria-label="播放系主任語音">▶</button></div><p class="advisor-quote" id="advisor-quote">大學四年就像一趟航程。先用數學、物理與程式打好底，再把基礎帶進電路、訊號和專業實作。</p><div class="advisor-bottom"><span>系主任・島嶼導覽員</span><button id="next-guide" class="next-guide">下一段 <b>→</b></button></div></div>
+        <div class="guided-tour" id="guided-tour"><div><span class="tour-kicker">GUIDED TOUR</span><strong>四年學習導覽</strong><small id="tour-caption">跟著系主任，沿年級走一遍學習路線。</small></div><button id="tour-next" class="tour-next" disabled>下一站 →</button></div>
+        <div class="route-panel hidden" id="route-panel"><div class="route-title"><span>⌁ 課程關聯路線</span><button id="route-clear" aria-label="清除路線">×</button></div><p>以下為課程關聯圖中的學習方向，並非正式先修規定。</p><div id="route-stops" class="route-stops"></div></div>
+        <div class="panel-title-row"><div><p class="eyebrow">COURSE EXPLORER</p><h2 id="panel-title">課程探索</h2></div><span class="course-count" id="course-count">—</span></div>
+        <label class="search-box"><span>⌕</span><input id="course-search" type="search" placeholder="搜尋課程名稱或課號" aria-label="搜尋課程名稱或課號"><kbd>⌘ K</kbd></label>
+        <div class="filter-row" id="filters"><button class="filter-chip active" data-filter="全部">全部</button><button class="filter-chip" data-filter="系訂專業必修">專業必修</button><button class="filter-chip" data-filter="核心課程">核心課程</button><button class="filter-chip" data-filter="系訂專業必選修">必選修</button><button class="filter-chip" data-filter="共同教育課程">共同教育</button></div>
+        <div id="course-list" class="course-list"></div>
+        <div class="regulation-box"><div class="regulation-head"><span>✳</span><strong>修課規則小提醒</strong></div><p>111 學年度入學生適用：六門核心課程至少選三門，並加修兩門對應領域指定課程。電路學一下、二上需依序修習。</p><button id="rules-open" class="rules-link">查看學分與規定 <b>↗</b></button></div>
+        <div class="favorites-box"><div class="favorite-heading"><strong>♡ 我的收藏</strong><span id="favorite-count">0</span></div><div id="favorite-list" class="favorite-list"><p>點課程旁的 ♡，收藏想進一步了解的課。</p></div></div>
+      </aside>
+    </section>
+    <section class="overview-view hidden" id="overview-view"><div class="overview-header"><div><p class="eyebrow">CURRICULUM AT A GLANCE</p><h2>四年課程總覽</h2><p>依照課程表的年級與學期安排，看看基礎如何逐步延伸到專題。</p></div><div class="overview-total"><strong>137</strong><span>畢業最低學分</span></div></div><div class="credit-chart-card"><div class="chart-heading"><div><strong>必修課程學分分布</strong><small>依附件表格的年級／學期欄位加總</small></div><span>學分</span></div><div id="credit-chart" class="credit-chart" role="img" aria-label="各學期必修課程學分分布"></div></div><div id="credit-composition" class="credit-composition"></div><div class="semester-board" id="semester-board"></div><div class="overview-foot"><div><span>110</span><small>必修總學分（含必選修 15 學分）</small></div><div><span>27</span><small>選修最低學分數</small></div><div><span>12 / 6</span><small>外系選修上限 / 電資學院外上限</small></div><button id="back-island" class="primary-button">返回探索島嶼 →</button></div></section>
+    <footer class="site-footer"><span>國立臺灣海洋大學電機工程學系</span><span>課程資料依提供之 111 學年度課程表整理</span><span>探索你的電機旅程　✳</span></footer>
+  </main>
+  <div class="modal hidden" id="rules-modal" role="dialog" aria-modal="true" aria-labelledby="rules-title"><div class="modal-backdrop" data-close="true"></div><div class="modal-card"><button class="modal-close" data-close="true" aria-label="關閉">×</button><p class="eyebrow">STUDY GUIDE</p><h2 id="rules-title">學分與修課規定</h2><div class="rule-stats"><div><b>137</b><span>畢業最低學分</span></div><div><b>110</b><span>必修總學分</span></div><div><b>27</b><span>選修最低學分</span></div></div><ul><li>系訂專業必選修：六門核心課程「自動控制、資料結構、半導體物理、電機機械、複變函數、通訊工程」至少選三門，並加修兩門對應領域指定課程。</li><li>外系選修不得超過 12 學分；其中電資學院以外系所課程不得超過 6 學分。</li><li>日文最多 4 學分可作為系訂專業選修；共同教育、軍訓與體育學分不計入系訂專業選修。</li><li>體育須修滿四學期零學分必修；選修體育課學分不列計入畢業學分。</li><li>電路學一下、二上課程需依序修習。</li></ul><p class="source-note">資料來源：提供之 Excel 必修科目表（111 學年度入學生適用）。兩份課程關聯圖對核心課程標示分別為「六選三」與「六選四」；本頁以 Excel 科目表列出的「至少必選 3 門」為修課規則依據，關聯圖僅作學習關聯參考。</p></div></div>
+  <script src="course-data.js"></script><script src="app.js"></script>
+</body>
+</html>
